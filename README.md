@@ -1,2 +1,2 @@
-# seedunk.net.harnesstester
-汽车通用线束测试仪
+# 线束测试仪上位机软件
+
