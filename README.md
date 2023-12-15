@@ -1,5 +1,7 @@
 # 线束测试仪上位机软件
 
+## 通信说明
+  <img src="http://seedunk.com/media/@va35d57f6d5264.w-640.svg">
 
 ## 通信方式
 1. RS232通信
