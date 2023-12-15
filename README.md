@@ -1,5 +1,5 @@
 # 线束测试仪上位机软件
-
+![](http://seedunk.com/badge/github-seedunk.net.harnesstester.svg)  ![](http://seedunk.com/badge/github-FAKRA.cbg-red.svg)
 ## 通信说明
   <img src="http://seedunk.com/media/@va35d57f6d5264.w-640.svg">
 
