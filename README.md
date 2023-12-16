@@ -13,7 +13,8 @@
 
 ## 代码示例
 ### TCP通信
-```c#
+
+```cshare
          public bool TryTest(out bool testResult, out string testResponse)
        {
                testResult = false;
@@ -61,7 +62,7 @@
       
             return tryStatus;
        }
-
+       
 ```
 
 
