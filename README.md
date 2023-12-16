@@ -12,59 +12,54 @@
   <img src="http://seedunk.com/media/@va35d57f6d5264.w-640.svg">
 
 ## 代码示例
+### TCP通信
   ```c#
-   public bool TryTest(out bool testResult, out string testLog)
+   public bool TryTest(out bool testResult, out string testResponse)
  {
-     try
-     {  
+         testResult = false;
+         testResponse = "";
+        bool tryStatus=false;
+       try
+       {  
          Socket clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
          //连接目标   
-         clientSocket.Connect("通信IP", 通信端口);
+         clientSocket.Connect("Device IP|设备TCP地址", Device Port|设备TCP端口);
           ... 其他设置
          clientSocket.Send(Command Test|电测命令);
 
          byte[] res = new byte[1024];
-         bool wait = true;
+     
          bool result = false;
-         int waitCount = 0;
-         testResult = false;
-         testLog = "";
-         while (wait)
+         int reconnectCount = 0;
+        
+         while (reconnectCount<10)
          {
              try
              {
                  if (clientSocket.Receive(res) > 0)
                  {
-                     testLog = Encoding.ASCII.GetString(res); 
-                     if (testLog.IndexOf("#OK,") > -1)
+                     testResponse += Encoding.ASCII.GetString(res); 
+                     if (testResponse.IndexOf("#OK,") > -1)
                      {
                          testResult = true;
-                     }
-                     wait = false;
-                     result = true; 
-                     break;
+                     } 
+                     tryStatus = true;  
                  }
              }
              catch (Exception e)
-             { 
-              
-                 waitCount++; 
+             {   
+                 reconnectCount++; 
                  Thread.Sleep(1000);
-             }
-             if (waitCount > 10)
-             {
-                 wait = false;
-             }
+             } 
          }
-         clientSocket.Close();
-         return result;
+         clientSocket.Close(); 
      }
      catch (Exception ex)
      {
-         testResult = false;
-         testLog = ""; 
-         return false;
+         Debug.WriteLine(ex.Messsage);
      }
+
+      return tryStatus;
  }
   ```
 
