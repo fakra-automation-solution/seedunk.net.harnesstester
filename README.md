@@ -13,7 +13,7 @@
 
 ## 代码示例
 ### TCP通信
-  ```c#
+```c#
          public bool TryTest(out bool testResult, out string testResponse)
        {
                testResult = false;
@@ -62,7 +62,7 @@
             return tryStatus;
        }
 
-  ```
+```
 
 
 
