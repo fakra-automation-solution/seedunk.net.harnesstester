@@ -1,4 +1,5 @@
-# 线束测试仪上位机软件
+# 线束测试仪上位机软件<br>及其在线束自动化循环线中的应用
+
 [![主页](http://seedunk.com/badge/github-seedunk.net.harnesstester.svg)](https://github.com/fakra-automation-solution/seedunk.net.harnesstester)  ![开发软件](http://seedunk.com/badge/code-framework48%20.net6.ic-dotnet.cbg-green.svg) ![站点统计](http://seedunk.com/badge/gh-sdn-harnesstester.svg)
 ## 供应商
   [![苏州中测](http://seedunk.com/badge/hctest.svg)](http://seedunk.com/badge/hctest.html) [![益和](http://seedunk.com/badge/microtest.svg)](http://seedunk.com/badge/microtest.html)
